@@ -13,8 +13,8 @@ import { Badge } from "./ui/badge";
 export const Footer = () => {
    return (
       <footer className="container py-20 pb-28 text-muted-foreground">
-         <div className="grid gap-x-4 gap-y-16 450:grid-cols-3 lg:grid-cols-5  [&_h4]:text-secondary *:space-y-8 [&_a]:p-0 [&_a]:text-muted-foreground hover:[&_a]:text-primary">
-            <ul className="max-w-sm 450:col-span-3 lg:col-span-2">
+         <div className="grid gap-x-4 gap-y-16 grid-cols-2 450:grid-cols-3 lg:grid-cols-5  [&_h4]:text-secondary *:space-y-8 [&_a]:p-0 [&_a]:text-muted-foreground hover:[&_a]:text-primary">
+            <ul className="max-w-sm col-span-2 450:col-span-3 lg:col-span-2">
                <Logo src="/footer-logo.svg" />
 
                <li>{FOOTER_DESCRIPTION}</li>

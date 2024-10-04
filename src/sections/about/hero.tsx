@@ -24,19 +24,19 @@ export const Hero = () => {
 
          <section className="container -mt-10 grid max-w-[1200px] gap-4 grid-cols-3 min-[500px]:-mt-16 sm:-mt-24 [&_img]:rounded-[24px] md:gap-10">
             <div className="grid gap-4 *:object-cover *:size-full md:gap-10">
-               <img src="/about/hero-1.svg" loading="lazy" />
-               <img src="/about/hero-2.svg" loading="lazy" />
+               <img src="/about/hero-1.jpg" loading="lazy" />
+               <img src="/about/hero-2.jpg" loading="lazy" />
             </div>
 
             <img
-               src="/about/hero-3.svg"
+               src="/about/hero-3.jpg"
                loading="lazy"
                className="object-cover max-w-lg mx-auto size-full"
             />
 
             <div className="grid gap-4 *:object-cover *:size-full md:gap-10">
-               <img src="/about/hero-4.svg" loading="lazy" />
-               <img src="/about/hero-5.svg" loading="lazy" />
+               <img src="/about/hero-4.jpg" loading="lazy" />
+               <img src="/about/hero-5.jpg" loading="lazy" />
             </div>
          </section>
       </div>
