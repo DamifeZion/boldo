@@ -6,12 +6,14 @@ import { Navbar } from './components/navbar/navbar';
 import { NewsLetter } from './components/newsletter';
 import { Footer } from './components/footer';
 import { LoadingFallback } from './components/loading-fallback';
+import useScrollToTop from './hooks/use-scroll-to-top';
 
 // Lazy-loaded components
 const About = React.lazy(() => import("@/pages/About"));
 
 
 const Routes = () => {
+   useScrollToTop();
 
    return (
       <React.Fragment>
