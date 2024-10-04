@@ -7,38 +7,40 @@ import { NewsLetter } from './components/newsletter';
 import { Footer } from './components/footer';
 import { LoadingFallback } from './components/loading-fallback';
 
-
+// Lazy-loaded components
 const About = React.lazy(() => import("@/pages/About"));
 
 
 const Routes = () => {
 
    return (
-      <React.Suspense fallback={<LoadingFallback />}>
+      <React.Fragment>
          <Navbar />
 
-         <Router>
-            <Route
-               index
-               path={routeConstants.home}
-               element={<Navigate to={routeConstants.about} />}
-            />
+         <React.Suspense fallback={<LoadingFallback />}>
+            <Router>
+               {/* Redirect home route to about */}
+               <Route
+                  index
+                  element={<Navigate to={routeConstants.about} />}
+               />
 
-            <Route
-               index
-               path={routeConstants.about}
-               element={<About />}
-            />
+               <Route
+                  path={routeConstants.about}
+                  element={<About />}
+               />
 
-            <Route
-               path='*'
-               element={<NotFound />}
-            />
-         </Router>
+               {/* 404 Not Found Route */}
+               <Route
+                  path='*'
+                  element={<NotFound />}
+               />
+            </Router>
+         </React.Suspense>
 
          <NewsLetter />
          <Footer />
-      </React.Suspense>
+      </React.Fragment>
    )
 }
 
