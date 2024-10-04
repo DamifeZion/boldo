@@ -11,6 +11,7 @@ export const ValuesCard: React.FC<TValuesCardProps> = ({
       <div className="flex flex-col gap-x-16 max-sm:gap-6 sm:flex-row">
          <img
             src={src}
+            loading="lazy"
             className="rounded-lg w-[150px] h-full max-h-[150px] object-cover"
          />
 

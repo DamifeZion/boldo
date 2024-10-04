@@ -8,6 +8,7 @@ export const TeamCard: React.FC<TTeamCardPros> = ({ src, name, position }) => {
          <CardContent>
             <img
                src={src}
+                loading="lazy"
                className="object-cover rounded-2xl w-full max-h-[350px]"
             />
 
